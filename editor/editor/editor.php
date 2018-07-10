@@ -154,7 +154,45 @@ class Brizy_Editor_Editor_Editor {
 					'wpApiUrl'  => admin_url( 'admin-ajax.php' ),
 					'submitUrl' => admin_url( 'admin-ajax.php' ) . "?action=brizy_submit_form"
 				)
-			)
+			),
+            'dynamicContent' => array(
+                'image' =>
+                    array(
+                        array(
+                            'title' => 'Logo',
+                            'shorthand' => '{{ 2c37efedcbc191a9b2c93517c0baa6acadeac16f }}',
+                            'data' => 'some value',
+                        ),
+                        array(
+                            'title' => 'Feature',
+                            'shorthand' => '{{ 71da4c05a54d9b0dcbb9fedfab016000e4380265 }}',
+                            'data' => 'some value',
+                        ),
+                        array(
+                            'title' => 'Author',
+                            'shorthand' => '{{ e3959c03766425afcfa8bd16e72fb505b6221ae1 }}',
+                            'data' => 'some value',
+                        ),
+                    ),
+                'richText' =>
+                    array(
+                        array(
+                            'title' => 'Example1',
+                            'shorthand' => '{{ ex1 }}',
+                            'data' => 'some value',
+                        ),
+                        array(
+                            'title' => 'Example2',
+                            'shorthand' => '{{ ex2 }}',
+                            'data' => 'some value',
+                        ),
+                        array(
+                            'title' => 'Example3',
+                            'shorthand' => '{{ ex3 }}',
+                            'data' => 'some value',
+                        ),
+                    ),
+            ),
 		);
 
 		return apply_filters( 'brizy_editor_config', $config );
