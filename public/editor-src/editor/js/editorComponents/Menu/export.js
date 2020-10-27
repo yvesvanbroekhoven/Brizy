@@ -42,6 +42,12 @@ export default function($node) {
       slidingSubmenus: false,
       navbar: {
         title: mmenuTitle
+      },
+      hooks: {
+        "openPanel:after": panel => {
+          // Emit Menu panel opened
+          window.Brizy.emit("elements.mmenu.panel.opened", panel);
+        }
       }
     };
 
